@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link href='//fonts.googleapis.com/css?family=Roboto:100,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+<!-- <body ng-app="Todo">  This works but slower!
+    <div class="page-container" ng-controller="TodoCtrl"> -->
+      <body ng-app="Todo" ng-controller="TodoCtrl">
+    <div class="page-container" >
+      
+      <h2>Todo List for Monday July 11</h2>
+      <ul class="todo-list" ng-repeat="t in todos track by $index">
+      <li>
+          <span>{{t}}</span>
+          <button class="bt bt-achieve" ng-click="done(todo)">Done</button>
+        </li>
+<!--  'ng-repeat' eliminates repition below      
+        <li>
+          Learn Sketch
+          <button class="bt bt-achieve">Done</button>
+        </li>
+        <li>
+          Look at Dribbble and feel inferior
+          <button class="bt bt-achieve">Done</button>
+        </li>
+        <li>
+          Actually learn how to use the Pen tool
+          <button class="bt bt-achieve">Done</button>
+        </li> -->
+      </ul>
+      
+      <ul class="add-todo">
+        <li>
+          <input type="text" class="txt" placeholder="New Todo" ng-model="newTodo" ng-keyup="add($event)" />
+        </li>
+      </ul>
+      
+    </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+      <!-- This source does not work! <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0-beta.8/angular.js"></script> -->
+    <script src="script.js"></script>
+  </body>
+
+</html>
