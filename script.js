@@ -11,6 +11,7 @@ app.controller(
   ];
 
   $scope.done = function(todo) {
+    console.log("clicked done!");
     var indexOf = $scope.todos.indexOf(todo);
     if (indexOf !== -1) {
       $scope.todos.splice(indexOf, 1);
